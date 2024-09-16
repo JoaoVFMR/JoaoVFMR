@@ -9,7 +9,7 @@ let DAB = []; // DAB de diferença A - B
 
 let DBA = []; // DBA de diferença B - A
 
-let DS = []; // DBA de diferença simétrica
+let DS = []; // DS de diferença simétrica
 
 let PA = [] // Conjunto das partes de A
 
