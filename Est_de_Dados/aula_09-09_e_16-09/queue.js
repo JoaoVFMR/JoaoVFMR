@@ -1,7 +1,7 @@
 class Queue{
     constructor() {
-    this.count = 0
-    this.lowestCount = 0
+    this.count = 0;
+    this.lowestCount = 0;
     this.items = []
     }
 
@@ -47,27 +47,19 @@ class Queue{
     }  
 }
 
-function hotPotato(elementsList, num) {
-    const queue = new Queue();
-    const elimitatedList = [];
-    for (let i = 0; i < elementsList.length; i++) {
-        queue.enqueue(elementsList[i])
-    }
-    while (queue.size() > 1) {
-        for (let i = 0; i < num; i++) {
-            queue.enqueue(queue.dequeue())
-        }
-        elimitatedList.push(queue.dequeue())
-    }
-    return {
-        eliminated: elimitatedList,
-        winner: queue.dequeue()
-    }
-}
+const queue = new Queue()
+console.log(queue.isEmpty())
 
-const names = ['João', 'Giovana', 'Diego', 'Rayssa', 'Tayana']
-const result = hotPotato(names, 7)
-result.eliminated.forEach(name => {
-console.log(`${name} foi eliminado do jogo da batata quente.`)
-})
-console.log(`O vencedor é: ${result.winner}`)
+queue.enqueue('João')
+queue.enqueue('Giovana')
+console.log(queue.toString())
+
+queue.enqueue('Rayssa')
+
+console.log(queue.toString())
+console.log(queue.size())
+console.log(queue.isEmpty())
+queue.dequeue()
+queue.dequeue()
+console.log(queue.toString())
+
