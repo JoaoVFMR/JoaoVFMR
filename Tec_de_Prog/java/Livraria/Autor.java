@@ -10,7 +10,7 @@ public class Autor {
         System.out.println("Nome do autor: " + nome);
         System.out.println("Email do autor: " + email);
         System.out.println("CPF do autor: " + cpf);
-        System.out.println("\n------------------------------------------------------------\n");
+        System.out.println("\n-------------------------------------\n");
     }
 }
 

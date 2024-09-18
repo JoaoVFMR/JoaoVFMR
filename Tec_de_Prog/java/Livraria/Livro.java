@@ -3,9 +3,13 @@ package Livraria;
 public class Livro {
 	String nome;
 	String descricao;
-	double valor;
+	private double valor;
 	String isbn;
     Autor autor;
+
+    Livro() {
+        System.out.println("Criando um novo livro");
+    }
 
     public void mostrarDetalhes(){
         String mensagem = "Informações do Livro";
@@ -14,12 +18,31 @@ public class Livro {
         System.out.println("Descrição do livro: " + descricao);
         System.out.println("Valor do livro: R$" + valor);
         System.out.println("ISBN do livro: " + isbn);
-        System.out.println("\n-------------------------------------------------------------\n");
+        System.out.println("\n-------------------------------------\n");
 
-        // System.out.println("Informações do Autor");
-        // System.out.println("Nome do autor: " + autor.nome);
-        // System.out.println("Email do autor: " + autor.email);
-        // System.out.println("CPF do autor: " + autor.cpf);
-        // System.out.println("\n------------------------------------------------------------");
+        
+        if (this.temAutor()){
+        	autor.mostrarDetalhes();
+        }
+    }
+    
+    public boolean aplicaDescontoDe(double porcentagem){
+        if(porcentagem > 0.3){
+            return false;
+        }
+    	this.valor -= this.valor * porcentagem;
+        return true;
+    }
+    
+    public boolean temAutor(){
+        return (autor != null);
+    }
+
+    public void adicionaValor(double preco){
+        this.valor = preco;
+    }
+
+    public double retornaValor(){
+        return this.valor;
     }
 }
