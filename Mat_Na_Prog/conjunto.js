@@ -15,7 +15,6 @@ console.log('');
 for (let i = 0; i < elementosA; i++) {
     let valor = Number(prompt(`Insira o valor no indice ${i} do conjunto A: `))
     A.push(valor)
-    
 }
 
 console.log('');
@@ -23,7 +22,6 @@ console.log('');
 for (let i = 0; i < elementosB; i++) {
     let valor = Number(prompt(`Insira o valor no indice ${i} do conjunto B: `))
     B.push(valor)
-    
 }
 
 let U = []; // U de união
