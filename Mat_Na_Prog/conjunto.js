@@ -1,5 +1,30 @@
-let A = [1, 2, 3, 4, 5];
-let B = [2, 4, 6, 8, 10];
+import promptSync from 'prompt-sync';
+
+const prompt = promptSync();
+
+let A = [];
+let B = [];
+
+console.log('');
+
+let elementosA = Number(prompt('Qual é a quantidade de elementos do conjunto A? '))
+let elementosB = Number(prompt('Qual é a quantidade de elementos do conjunto B? '))
+
+console.log('');
+
+for (let i = 0; i < elementosA; i++) {
+    let valor = Number(prompt(`Insira o valor no indice ${i} do conjunto A: `))
+    A.push(valor)
+    
+}
+
+console.log('');
+
+for (let i = 0; i < elementosB; i++) {
+    let valor = Number(prompt(`Insira o valor no indice ${i} do conjunto B: `))
+    B.push(valor)
+    
+}
 
 let U = []; // U de união
 
@@ -9,7 +34,7 @@ let DAB = []; // DAB de diferença A - B
 
 let DBA = []; // DBA de diferença B - A
 
-let DS = []; // DS de diferença simétrica
+let DS = []; // DBA de diferença simétrica
 
 let PA = [] // Conjunto das partes de A
 
@@ -124,39 +149,30 @@ function imprimirConjuntosAB(){
     console.log(B);
 }
 
-function linhaSeparacao(){
-    console.log("----------------------------------------------------------------------");
-}
-
 imprimirConjuntosAB();
 console.log(`Conjunto U ou União = `);
 console.log(U);
-console.log(`Tamanho do conjunto U = ${U.length}`);
-linhaSeparacao()
+console.log(`Tamanho do conjunto U ou União = ${U.length}`);
 
 imprimirConjuntosAB();
 console.log(`Conjunto I ou Intersecção = `);
 console.log(I);
-console.log(`Tamanho do conjunto I = ${I.length}`);
-linhaSeparacao()
+console.log(`Tamanho do conjunto I ou Intersecção = ${I.length}`);
 
 imprimirConjuntosAB();
 console.log(`Conjunto DAB ou diferença de A - B = `);
 console.log(DAB);
-console.log(`Tamanho do conjunto I = ${DAB.length}`);
-linhaSeparacao()
+console.log(`Tamanho do conjunto DAB ou diferença de A - B = ${DAB.length}`);
 
 imprimirConjuntosAB();
-console.log(`Conjunto DAB ou diferença de B - A = `);
+console.log(`Conjunto DBA ou diferença de B - A = `);
 console.log(DBA);
-console.log(`Tamanho do conjunto I = ${DBA.length}`);
-linhaSeparacao()
+console.log(`Tamanho do conjunto DBA ou diferença de B - A = ${DBA.length}`);
 
 imprimirConjuntosAB();
-console.log(`Conjunto Diferença simétrica DS AB = `);
+console.log(`Conjunto Diferença Simétrica DS AB = `);
 console.log(DS);
-console.log(`Tamanho do conjunto I = ${DS.length}`);
-linhaSeparacao()
+console.log(`Tamanho do conjunto Diferença Simétrica DS AB = ${DS.length}`);
 
 imprimirConjuntosAB();
 console.log(`Conjunto das partes de A, P(A) = `);
