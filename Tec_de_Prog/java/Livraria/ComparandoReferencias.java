@@ -3,14 +3,14 @@ package Livraria;
 public class ComparandoReferencias {
 	public static void main (String[] args) {
 		Autor autor = new Autor();
-		autor.nome = "Rodrigo Turini";
-		autor.email = "rodrigo.turino@caelum.com.br";
-		autor.cpf = "123.456.789-10";
+		autor.setNome("Rodrigo Turini");
+		autor.setEmail("rodrigo.turino@caelum.com.br");
+		autor.setCpf("123.456.789-10");
 		
 		Autor autor2 = new Autor();
-		autor2.nome = "Rodrigo Turini";
-		autor2.email = "rodrigo.turino@caelum.com.br";
-		autor2.cpf = "123.456.789-10";
+		autor2.setNome("Rodrigo Turini");
+		autor2.setEmail("rodrigo.turino@caelum.com.br");
+		autor2.setCpf("123.456.789-10");
 
         if (autor == autor2) {
             System.out.println("São iguais");
@@ -19,14 +19,14 @@ public class ComparandoReferencias {
         }
 
         Autor autor3 = new Autor();
-        autor3.nome = "Rodrigo Turini";
+        autor3.setNome("Rodrigo Turini");
 
         Livro livro = new Livro();
-        livro.autor = autor3;
+        livro.setAutor(autor3);
 
-        livro.autor.nome = "Guilherme Silveira";
+        livro.getAutor().setNome("Guilherme Silveira");
 
-        System.out.println(autor.nome);
-        System.out.println(livro.autor.nome);
+        System.out.println(autor.getNome());
+        System.out.println(livro.getAutor().getNome());
 	}
 }
