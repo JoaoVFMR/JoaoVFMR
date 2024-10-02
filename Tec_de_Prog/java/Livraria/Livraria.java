@@ -1,13 +1,13 @@
 package Livraria;
 
 public class Livraria {
-	public static void main (String[] args) {
-		Livro livro = new Livro();
-		livro.setNome("Java 8 prático");
-		livro.setDescricao("Novo recursos da linguagem");
-		livro.setValor(59.90);
-		livro.setIsbn("978-85-66250-46-6");
-		
+    public static void main(String[] args) {
+        Livro livro = new Livro();
+        livro.setNome("Java 8 prático");
+        livro.setDescricao("Novo recursos da linguagem");
+        livro.setValor(59.90);
+        livro.setIsbn("978-85-66250-46-6");
+
         Livro outroLivro = new Livro();
         outroLivro.setNome("Lógica de Programação");
         outroLivro.setDescricao("Crie seus primeiros programas");
@@ -30,5 +30,8 @@ public class Livraria {
 
         livro.mostrarDetalhes();
         outroLivro.mostrarDetalhes();
-	}
+
+        Ebook ebook = new Ebook(outroAutor);
+        ebook.setNome("Java 8 Prático");
+    }
 }
