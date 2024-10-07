@@ -10,17 +10,14 @@ class LinkedList {
         this.head = null
     }
 
-    // Método para inserir um nome em ordem alfabética
-    insertInOrder(name) {
+    nomeOrdemAlfabetica(name) {
         const newNode = new Node(name)
 
-        // Se a lista estiver vazia ou o novo nome for menor que o primeiro, insira no início
         if (this.head === null || name < this.head.data) {
             newNode.next = this.head
             this.head = newNode
         } else {
             let current = this.head
-            // Percorre a lista até encontrar a posição correta
             while (current.next !== null && current.next.data < name) {
                 current = current.next
             }
@@ -29,7 +26,6 @@ class LinkedList {
         }
     }
 
-    // Método para imprimir a lista
     printList() {
         let current = this.head
         while (current !== null) {
@@ -39,7 +35,6 @@ class LinkedList {
     }
 }
 
-// Criação das listas desordenada e ordenada
 const listaDesordenada = [
     "ARTHUR DAVI GOMES",
     "BRUNO HENRIQUE QUERICHELLI GARCIA",
@@ -70,12 +65,9 @@ const listaDesordenada = [
     "ROBSON ALAN MANTOVANI"
 ]
 
-// Lista ligada para armazenar os nomes em ordem alfabética
 const listaOrdenada = new LinkedList()
 
-// Inserir os nomes da lista desordenada na lista ordenada
 listaDesordenada.forEach(nome => listaOrdenada.insertInOrder(nome))
 
-// Imprimir a lista em ordem alfabética
 console.log("Lista de nomes em ordem alfabética:")
 listaOrdenada.printList()
