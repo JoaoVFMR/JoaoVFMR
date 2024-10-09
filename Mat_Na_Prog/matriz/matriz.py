@@ -75,8 +75,7 @@ else:
     x = det_X / detA
     y = det_Y / detA
     z = det_Z / detA
-    
-print(f"Solução: X = {x}, Y = {y}, Z = {z}")
+    print(f"Solução: X = {x}, Y = {y}, Z = {z}")
 
 # EXEMPLO DE MATRIZ DETERMINADA (UMA ÚNICA SOLUÇÃO)
 # matrizA = [
