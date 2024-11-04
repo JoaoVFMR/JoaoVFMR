@@ -48,8 +48,12 @@ class ArvoreBinaria {
 
     }
 
-    inOrderTraverse() {
-
+    inOrderTraverse(node) {
+        if (node != null) {
+            this.inOrderTraverse(node.left)
+            console.log(node.key)
+            this.inOrderTraverse(node.right);
+        }
     }
 
     preOrderTraverse() {
